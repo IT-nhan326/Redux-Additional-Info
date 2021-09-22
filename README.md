@@ -1,12 +1,19 @@
 # Redux-Additional-Info
 
 ## Redux : 
+- [combineReducer](https://redux.js.org/api/combinereducers)
+   - The `combineReducers` helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore. 
+   - The resulting reducer calls every child reducer, and gathers their results into a single state object. **The state produced by `combineReducers()` namespaces the states of each reducer under their keys as passed to `combineReducers()`**
+
+
 
 ### 1. [Redux-toolkit](https://redux-toolkit.js.org/)
 - The Redux Toolkit package is intended to be the standard way to write Redux logic. It was originally created to help address three common concerns about Redux :
    - "Configuring a Redux store is too complicated"
    - "I have to add a lot of packages to get Redux to do anything useful"
    - "Redux requires too much boilerplate code"
+
+
 
 ### 2. [Redux Dynamic Modules](https://github.com/microsoft/redux-dynamic-modules)
 - In large Javascript applications, it is often desired to perform some kind of code-splitting, so that the initial script size is small. However, in Redux, you are required to define your reducers and middleware up-front; there is no good way to dynamically add/remove these constructs at runtime.
@@ -21,7 +28,10 @@
 - The mental model is that a saga is like a separate thread in your application that's solely responsible for side effects. `redux-saga` is a redux middleware, which means this thread can be started, paused and cancelled from the main application with normal redux actions, it has access to the full redux application state and it can dispatch redux actions as well.
 
 ### 4. [Redux Dynamic Modules with Saga](https://github.com/microsoft/redux-dynamic-modules/blob/master/docs/reference/ReduxSaga.md)
+- You can use `redux-dynamic-modules` alongside `redux-saga` so that you can add/remove sagas along with your modules.
 
+### 5. [Redux-persist](https://github.com/rt2zz/redux-persist)
+- Redux persist is a library that allows saving a Redux store in the local storage of an application.
 
 
 ## Additional libraries can be used :
